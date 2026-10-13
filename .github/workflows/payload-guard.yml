@@ -1,0 +1,16 @@
+name: payload-guard
+on:
+  pull_request:
+  push:
+    branches: ['**']
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Scan tracked files for the malware payload family
+        run: node scripts/payload-guard.cjs --tree
