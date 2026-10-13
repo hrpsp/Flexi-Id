@@ -1,0 +1,3 @@
+#!/bin/sh
+# Blocks commits that contain the malware payload. Enable with: git config core.hooksPath .githooks
+node scripts/payload-guard.cjs --staged || exit 1

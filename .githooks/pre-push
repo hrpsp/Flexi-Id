@@ -1,0 +1,3 @@
+#!/bin/sh
+# Blocks pushes when the checked-out tree contains the malware payload.
+node scripts/payload-guard.cjs --tree || exit 1

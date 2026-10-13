@@ -1,0 +1,12 @@
+# Files the payload family tampers with, plus the guard itself, need owner review.
+# Replace @hrpsp with the real owner/team. Requires "Require review from Code Owners" in branch protection.
+/.github/                 @hrpsp
+/scripts/payload-guard.cjs @hrpsp
+/.githooks/               @hrpsp
+package.json              @hrpsp
+**/package.json           @hrpsp
+artisan                   @hrpsp
+**/artisan                @hrpsp
+**/*.config.*             @hrpsp
+.gitignore                @hrpsp
+**/.gitignore             @hrpsp
